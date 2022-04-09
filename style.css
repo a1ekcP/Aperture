@@ -77,6 +77,18 @@ ul, li, ul{
 
 /*-------------------*/
 
+.title__min{
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #C0C0C0;
+}
+
+/*------------------*/
+
 .btn{
     font-size: 15px;
     line-height:  133%;
@@ -131,7 +143,11 @@ ul, li, ul{
 
 /*-----------------------*/
 
-
+.page{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
 /*---------------HEADER-----------------*/
 
@@ -253,3 +269,99 @@ input.head__menu:checked ~ label.head__menu{
         gap: 20px;
     }
 }
+
+/*---------------HEADER-----------------*/
+
+
+/*---------------MAIN-----------------*/
+/*.main-screen{
+    position: relative;
+    background: #000000;
+}
+.main-screen__bg{
+    position: relative;
+    height: 100%;
+}
+.main-screen__bg img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+}
+*/
+.main-screen__capt{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+.main-screen__about-time{
+    background: url("icon/main/1.png") no-repeat left center;
+    padding-left: 22px;
+    background-size: contain;
+}
+.main-screen__about-diafragma{
+    background: url("icon/main/2.png") no-repeat left center;
+    padding-left: 22px;
+    background-size: contain;
+}
+.main-screen__about-iso{
+    background: url("icon/main/3.png") no-repeat left center;
+    padding-left: 39px;
+    background-size: contain;
+}
+.main-screen__about-place{
+    background: url("icon/main/4.png") no-repeat left center;
+    padding-left: 15px;
+    background-size: contain;
+}
+
+.main-screen__describe{
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    max-width: 580px;
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+.main-screen__title{
+    font-size: 54px;
+    line-height: 110%;
+    color: #FFFFFF;
+
+    margin-bottom: 18px;
+}
+.main-screen__text{
+    font-size: 14px;
+    line-height: 143%;
+    text-align: center;
+    color: #C0C0C0;
+}
+
+.main{
+    position: relative;
+
+    min-height: 100vh;
+    background: linear-gradient(360deg, #000000 18.78%, rgba(0, 0, 0, 0) 98.53%) ,url("img/main/main-photo.jpg") no-repeat center / cover;
+}
+
+/*-------------------*/
+@media (max-width: 900px){
+    .main-screen__describe{
+        max-width: 100%;
+        width: 90%;
+        bottom: 25%;
+    }
+}
+@media (max-width: 500px){
+    .main-screen__describe{
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+@media (max-width: 400px){
+    .main-screen__capt{
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
+/*---------------MAIN-----------------*/
