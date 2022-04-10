@@ -57,8 +57,6 @@ ul, li, ul{
 /*---------------*/
 
 .block__title{
-    max-width: 570px;
-    text-align: center;
 }
 .title{
     font-size: 40px;
@@ -80,7 +78,6 @@ ul, li, ul{
 .title__min{
     font-size: 14px;
     line-height: 143%;
-    text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
 
@@ -274,43 +271,30 @@ input.head__menu:checked ~ label.head__menu{
 
 
 /*---------------MAIN-----------------*/
-/*.main-screen{
-    position: relative;
-    background: #000000;
-}
-.main-screen__bg{
-    position: relative;
-    height: 100%;
-}
-.main-screen__bg img{
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-}
-*/
+
 .main-screen__capt{
     position: absolute;
     bottom: 40px;
     right: 40px;
 }
-.main-screen__about-time{
+.camera-data__about-time{
     background: url("icon/main/1.png") no-repeat left center;
-    padding-left: 22px;
+    padding-left: 18px;
     background-size: contain;
 }
-.main-screen__about-diafragma{
+.camera-data__about-diafragma{
     background: url("icon/main/2.png") no-repeat left center;
-    padding-left: 22px;
+    padding-left: 18px;
     background-size: contain;
 }
-.main-screen__about-iso{
+.camera-data__about-iso{
     background: url("icon/main/3.png") no-repeat left center;
-    padding-left: 39px;
+    padding-left: 35px;
     background-size: contain;
 }
-.main-screen__about-place{
+.camera-data__about-place{
     background: url("icon/main/4.png") no-repeat left center;
-    padding-left: 15px;
+    padding-left: 12px;
     background-size: contain;
 }
 
@@ -337,7 +321,7 @@ input.head__menu:checked ~ label.head__menu{
     color: #C0C0C0;
 }
 
-.main{
+.main-screen{
     position: relative;
 
     min-height: 100vh;
@@ -365,3 +349,108 @@ input.head__menu:checked ~ label.head__menu{
     }
 }
 /*---------------MAIN-----------------*/
+
+/*---------------AREAS-----------------*/
+.areas{
+    background: #000000;
+    padding: 112px 0 100px 0;
+}
+.areas__subtitle{
+    margin-bottom: 42px;
+}
+
+.areas__items{
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.areas__item{
+    width: calc(50% - 16px);
+    position: relative;
+    overflow: hidden;
+}
+.areas__item img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: 0.6s;
+}
+.areas__item img:hover{
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+.areas__capture{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+.capture__title{
+    margin-bottom: 20px;
+}
+.capture__text{
+    font-size: 14px;
+    line-height: 143%;
+    color: #C0C0C0;
+    max-width: 500px;
+
+    margin-bottom: 20px;
+}
+
+/*---------------------*/
+@media (max-width: 919.75px){
+    .areas__item{
+        width: 100%;
+    }
+}
+@media (max-width: 400px){
+    .areas__capture{
+        position: unset;
+        margin-top: 10px;
+    }
+
+}
+
+/*---------------AREAS-----------------*/
+
+
+/*---------------PHOTO-----------------*/
+.photo{
+    height: 600px;
+    position: relative;
+    padding: 40px;
+}
+.block-photo-1{
+    background: url(img/block-photo-1/photo.jpg) center / cover no-repeat;
+}
+.photo__capture{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 62px;
+
+    max-width: 300px;
+}
+.capture__title{
+    margin-bottom: 0;
+}
+.photo__capt{
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100%;
+}
+
+@media (max-width: 400px){
+    .photo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .photo__capture{
+        position: unset;
+    }
+    .photo__capt {
+        justify-content: center;
+        height: auto;
+    }
+}
+/*---------------PHOTO-----------------*/
